@@ -1,0 +1,23 @@
+{
+  "name": "button",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-scripts": "1.1.4",
+    "reason-react": "^0.4.1"
+  },
+  "scripts": {
+    "start": "concurrently --kill-others --names \"ReasonML,CRA\" --prefix-colors \"red.bgBlack.bold,yellow.bgBlack.bold\" \"yarn start:bsb\" \"yarn start:cra\"",
+    "start:bsb": "bsb -make-world -w",
+    "start:cra": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "bs-platform": "^3.0.0",
+    "concurrently": "^3.5.1"
+  }
+}
